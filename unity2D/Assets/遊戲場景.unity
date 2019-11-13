@@ -698,7 +698,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 100, y: 0.32}
+  m_Size: {x: 500, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -712,7 +712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788988513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.41, y: -4.61, z: 0}
+  m_LocalPosition: {x: 648, y: -4.61, z: 0}
   m_LocalScale: {x: 2.605302, y: 2.605302, z: 2.605302}
   m_Children: []
   m_Father: {fileID: 0}
@@ -730,7 +730,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe126b44237674408e987b15a3b0235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 14.1
+  speed: 0.9
+  floor: {fileID: 788988515}
 --- !u!1 &849048420
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,7 +742,6 @@ GameObject:
   m_Component:
   - component: {fileID: 849048422}
   - component: {fileID: 849048421}
-  - component: {fileID: 849048423}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
@@ -779,22 +779,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &849048423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849048420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73e42938b06d5dc47927298883283440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coin: 999
-  speed: 4.9
-  prop: "\u7D05\u8272\u85E5\u6C34"
-  dead: 0
 --- !u!1 &901131674
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76d5ed0b37ca954a867f40691ef5528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: 0
+  point: 2752
 --- !u!1 &1070906047
 GameObject:
   m_ObjectHideFlags: 0
