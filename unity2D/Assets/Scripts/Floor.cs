@@ -8,17 +8,20 @@ public class Floor : MonoBehaviour
 
     public Transform floor;
 
-    private void Update()
-    {
-        floor.Translate(-speed, 0, 0);
-    }
+    
 
     /// <summary>
     /// 地板移動方法
     /// </summary>
     private void Move()
     {
-
+        //Time.deltatime 一個影格的時間(根據電腦效能不同)
+        floor.Translate(-speed * Time.deltaTime, 0, 0);
     }
 
+
+    private void Update()
+    {
+        Move();
+    }
 }
