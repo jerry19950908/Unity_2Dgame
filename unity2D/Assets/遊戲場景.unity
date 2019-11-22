@@ -772,6 +772,8 @@ GameObject:
   - component: {fileID: 849048423}
   - component: {fileID: 849048424}
   - component: {fileID: 849048425}
+  - component: {fileID: 849048426}
+  - component: {fileID: 849048427}
   m_Layer: 0
   m_Name: "\u7DF4\u7FD2\u7269\u4EF6"
   m_TagString: Untagged
@@ -846,6 +848,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Test: {fileID: 1678053281}
+--- !u!114 &849048426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849048420}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fba836310e33cb4cb6f836f6670a64c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 10
+  b: 3
+  c: 20
+  d: 7
+--- !u!114 &849048427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849048420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09e6eccdfd256094e84c73a39f7ef3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  score: 39
+  combo: 200
 --- !u!1 &901131674
 GameObject:
   m_ObjectHideFlags: 0
