@@ -5,6 +5,6 @@ public class Pipe : Floor
     private void Start()
     {
         //刪除(此遊戲物件  2.3秒延遲)
-        Destroy(gameObject, 2.3f);
+        Destroy(gameObject, 3f);
     }
 }

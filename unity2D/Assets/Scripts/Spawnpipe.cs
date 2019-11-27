@@ -34,7 +34,7 @@ public class Spawnpipe : MonoBehaviour
         //延遲調用("方法名稱", 延遲時間);
         //Invoke("Spawn_Pipe", 1.5f);  - 1.5秒只會重複一次
         //延遲重複調用("方法名稱", 延遲時間, 重複頻率);
-        InvokeRepeating("Spawn_Pipe", 0, 2f);
+        InvokeRepeating("Spawn_Pipe", 0, 2.8f);
 
     } 
     

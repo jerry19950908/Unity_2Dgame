@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d0078b958b7dd14f8f975c38b4f8fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5.53
+  speed: 4.2
   floor: {fileID: 1942129560746593745}
 --- !u!1 &7739493212023979692
 GameObject:
@@ -57,6 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7739493212023979694}
   - component: {fileID: 7739493212023979693}
+  - component: {fileID: 902940212712147804}
   m_Layer: 0
   m_Name: "\u6C34\u7BA1(\u4E0B)"
   m_TagString: Untagged
@@ -127,6 +128,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &902940212712147804
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739493212023979692}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.003767699, y: -0.003767714}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.3209982, y: 0.6324645}
+  m_EdgeRadius: 0
 --- !u!1 &7739493212289020307
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,6 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7739493212289020309}
   - component: {fileID: 7739493212289020308}
+  - component: {fileID: 1618412699337747634}
   m_Layer: 0
   m_Name: "\u6C34\u7BA1(\u4E0A) "
   m_TagString: Untagged
@@ -207,3 +235,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1618412699337747634
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739493212289020307}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0012559518, y: 0.0037677288}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.32602185, y: 0.6324645}
+  m_EdgeRadius: 0
