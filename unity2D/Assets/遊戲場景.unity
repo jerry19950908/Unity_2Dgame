@@ -731,7 +731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe126b44237674408e987b15a3b0235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4.2
   floor: {fileID: 788988515}
 --- !u!61 &788988517
 BoxCollider2D:
@@ -950,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '  0'
+  m_Text: 0
 --- !u!222 &901131677
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -971,7 +970,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76d5ed0b37ca954a867f40691ef5528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  point: 2752
+  point: 0
+  textpoint: {fileID: 901131676}
 --- !u!1 &1070906047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1455,9 @@ MonoBehaviour:
   goScore: {fileID: 901131674}
   goSpawnpipe: {fileID: 1953050611}
   flyup: {fileID: 1678053282}
+  gameover: {fileID: 2121697773}
+  spawn: {fileID: 1953050612}
+  add: {fileID: 901131678}
 --- !u!50 &1678053282
 Rigidbody2D:
   serializedVersion: 4
@@ -1784,3 +1787,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: 1778
+  gofinal: {fileID: 1619810667}

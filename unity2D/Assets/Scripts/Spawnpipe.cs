@@ -5,6 +5,8 @@ public class Spawnpipe : MonoBehaviour
     // GameObject 可以存放場景上的物件跟預製物
     public GameObject pipe;
 
+   
+
     
     /// <summary>
     /// 生成水管的方法
@@ -36,10 +38,18 @@ public class Spawnpipe : MonoBehaviour
         //延遲重複調用("方法名稱", 延遲時間, 重複頻率);
         InvokeRepeating("Spawn_Pipe", 0, 2.8f);
 
-    } 
-    
+    }
 
 
-  
+    //改成public 可以讓其他類別繼承這裡的成員 如果是private 只能在該類別裡使用
+
+    public void Gameover()
+    {
+        //取消延遲調用("方法名稱") 取消生成水管
+        CancelInvoke("Spawn_Pipe");
+
+    }
+
+
 
 }

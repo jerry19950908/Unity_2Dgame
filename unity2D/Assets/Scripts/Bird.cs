@@ -14,8 +14,11 @@ public class Bird : MonoBehaviour
     public GameObject goScore, goSpawnpipe;
 
     public Rigidbody2D flyup;
-   
 
+    //把 Bestpoint Spawnpipe Gamepoint類別拿來使用
+    public Bestpoint gameover;
+    public Spawnpipe spawn;
+    public Gamepoint add;   
     /// <summary>
     /// 小雞跳躍功能
     /// </summary>
@@ -58,15 +61,12 @@ public class Bird : MonoBehaviour
     private void Dead()
     {
         dead = true;
+        gameover.Gameover();
+        spawn.Gameover();
+        Floor.speed = 0; //變靜態成員之後 可以從其他類別使用此方法(類似API用法)!!
     }
 
-    /// <summary>
-    /// 通過水管
-    /// </summary>
-    private void Pass()
-    {
-
-    }
+   
 
     private void Update()
     {
@@ -84,9 +84,21 @@ public class Bird : MonoBehaviour
     //觸發開始事件:物件觸發開始時 執行一次 (紀錄觸發物件資訊) - 針對有勾選 isTrigger的物件 (有設定Collider碰撞器)
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Dead();
+        if(collision.gameObject.name == "水管(下)" || collision.gameObject.name == "水管(上)")
+        {
+            Dead();
+        }
+       
     }
 
+    //觸發開始事件:物件觸發 開始離開此物件時 執行一次(紀錄觸發物件資訊)
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.name == "通過水管")
+        {
+            add.Addpoint();
+        }
+    }
 
 
 
