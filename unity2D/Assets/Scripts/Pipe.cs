@@ -9,11 +9,23 @@ public class Pipe : Floor
     //}
 
 
-
-
+    //使用該事件的物件 要加 Mesf Renderer
+    //在所有相機看不到時 執行一次
     private void OnBecameInvisible()
     {
         
-        Destroy(gameObject, 2.5f);
+        Destroy(gameObject, 2f);
     }
+
+
+
+    //使用該事件的物件 要加 Mesf Renderer
+    //在所有相機看到時 執行一次
+    private void OnBecameVisible()
+    {
+        
+    }
+
+
+
 }

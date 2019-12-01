@@ -18,7 +18,14 @@ public class Bird : MonoBehaviour
     //把 Bestpoint Spawnpipe Gamepoint類別拿來使用
     public Bestpoint gameover;
     public Spawnpipe spawn;
-    public Gamepoint add;   
+    public Gamepoint add;
+
+    [Header("音效區域")]
+    public AudioSource aud;
+    public AudioClip soundjump, soundhit, soundpass;
+
+
+
     /// <summary>
     /// 小雞跳躍功能
     /// </summary>
@@ -43,7 +50,7 @@ public class Bird : MonoBehaviour
             flyup.AddForce(Vector2.up * high);
             //讓小雞產生向上的推力 2D剛體 用Vector2
             //另一個寫法  flyup.AddForce(new Vector2(0, high));   
-
+            aud.PlayOneShot(soundjump, 2f);    //音源.撥放一次 (音效, 音量)
         }
 
         flyup.SetRotation(angle* flyup.velocity.y);
@@ -79,6 +86,7 @@ public class Bird : MonoBehaviour
       //碰撞.遊戲物件.場景上的名稱
       //print(collision.gameObject.name); 顯示在 Console上面
         Dead();
+        
     }
 
     //觸發開始事件:物件觸發開始時 執行一次 (紀錄觸發物件資訊) - 針對有勾選 isTrigger的物件 (有設定Collider碰撞器)
@@ -87,6 +95,7 @@ public class Bird : MonoBehaviour
         if(collision.gameObject.name == "水管(下)" || collision.gameObject.name == "水管(上)")
         {
             Dead();
+            aud.PlayOneShot(soundhit, 2f);    //音源.撥放一次 (音效, 音量)
         }
        
     }
@@ -97,6 +106,8 @@ public class Bird : MonoBehaviour
         if(collision.gameObject.name == "通過水管")
         {
             add.Addpoint();
+            aud.PlayOneShot(soundpass, 2f);    //音源.撥放一次 (音效, 音量)
+
         }
     }
 
