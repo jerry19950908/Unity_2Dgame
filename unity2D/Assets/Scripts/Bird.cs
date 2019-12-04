@@ -25,6 +25,13 @@ public class Bird : MonoBehaviour
     public AudioClip soundjump, soundhit, soundpass;
 
 
+    private void Start()
+    {
+        //螢幕.設定解析度(寬, 高, 是否全螢幕)
+        Screen.SetResolution(450, 800, false);
+    }
+
+
 
     /// <summary>
     /// 小雞跳躍功能
@@ -67,6 +74,9 @@ public class Bird : MonoBehaviour
     /// </summary>
     private void Dead()
     {
+        if (dead) return;  //第一次碰到水管,不會執行這行,掉下來碰到第二次水管 才不會執行下面的程式
+                           // 邏輯問題
+
         dead = true;
         gameover.Gameover();
         spawn.Gameover();
@@ -102,8 +112,9 @@ public class Bird : MonoBehaviour
 
     //觸發開始事件:物件觸發 開始離開此物件時 執行一次(紀錄觸發物件資訊)
     private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.name == "通過水管")
+    {                                                 
+                                                   //不等於死亡 = 還沒死亡(邏輯問題)
+        if(collision.gameObject.name == "通過水管" && !dead)  //通過水管 並且還沒死亡 才能加分
         {
             add.Addpoint();
             aud.PlayOneShot(soundpass, 2f);    //音源.撥放一次 (音效, 音量)

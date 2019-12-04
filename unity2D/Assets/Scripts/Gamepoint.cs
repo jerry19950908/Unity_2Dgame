@@ -7,6 +7,9 @@ public class Gamepoint : MonoBehaviour
     [Header("分數"), Range(0,9999)]
     public int point = 0;
     public Text textpoint;
+
+    public Bestpoint bestpoint;
+
   
     /// <summary>
     /// 加分數
@@ -18,5 +21,7 @@ public class Gamepoint : MonoBehaviour
         print("加分~~");
         point = point + add;
         textpoint.text = point.ToString(); //把分數也可以當成引用字串
+
+        bestpoint.Sethighpoint();
     }
 }
